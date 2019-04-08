@@ -5,25 +5,33 @@ import numpy
 a=numpy.array(['a','b','c'])
 # print a
 b=pandas.Series(a)
-
+'its like array but different object'
 # print b
+'returns a series with true false'
 # print b.str.contains('a')
 # print b.str.upper()
 # print b.str.replace('a','A')
+'*3 for every element '
 # print b.str.repeat(3)
+'counts the a in each position'
 # print b.str.count('a')
-# print pandas.Series({'a':1,'sam':'paul'})
+# print pandas.Series({'a':1,'peter':'paul'})
+'all positions are 3s'
 # print pandas.Series(3,index=[1,2,3])
 # print a[1]
-# print b.str.findall(r'.')
+# print b.str.findall(r'\.')
     #dataframe
-d=[['sam',3],['paul',4]]    #creating dataframe from list each row is a list
+d=[['peter',3],['paul',4]]    #creating dataframe from list each row is a list
 a=pandas.DataFrame(d,columns=['Name','age'],dtype=float)
-d={'Name':['sam','paul'],'age':[1,2]}
+# print a
+'column names are keys and values are list of elements of each row'
+d={'Name':['peter','paul'],'age':[1,2]}
 a=pandas.DataFrame(d)
+# print a
 # print a['Name']   #selecting a column
 a['class']=[10,10]  #adding a column
 # print a
+
 # del a['age']
 # a.pop('class')
 # print a
@@ -35,8 +43,10 @@ a=a.append(b)
 a=a.drop(0) #drops the row 0
 # print a
     #panel
+'2 matrices each has 4 rows and 5 columns'
 x=numpy.random.rand(2,4,5)
 # print x
+'a collection of dataframes'
 a=pandas.Panel(x,dtype=float)
 # print a
 # print a[0][1][1]
@@ -102,7 +112,7 @@ y=pandas.Series(numpy.random.rand(10))
 # print x.fillna(0) #fills NA with 0
 # print y.dropna()  #removes NA
 # print x.replace({0:1})    #replaces 0 with 1
-d= c.groupby(1)
+d= c.groupby(1) #same as dbms
 # for i,j in d:
 #     print i
 #     print j
